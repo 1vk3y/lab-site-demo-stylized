@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.6"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g opacity="0.8">
+    <circle cx="420" cy="360" r="220" fill="url(#r1)" filter="url(#blur)"/>
+    <circle cx="1080" cy="520" r="260" fill="url(#r1)" filter="url(#blur)"/>
+  </g>
+  <g fill="none" stroke="url(#g1)" stroke-width="3" opacity="0.5">
+    <path d="M150 450c120-200 320-200 520-80s380 140 580-40"/>
+    <path d="M150 520c140-160 340-160 520-40s360 120 560-60"/>
+    <path d="M150 590c160-120 360-120 520 0s320 100 540-80"/>
+  </g>
+  <g fill="#38bdf8" opacity="0.85">
+    <circle cx="540" cy="420" r="8"/>
+    <circle cx="600" cy="450" r="5"/>
+    <circle cx="980" cy="540" r="7"/>
+    <circle cx="1030" cy="500" r="4"/>
+    <circle cx="700" cy="380" r="6"/>
+  </g>
+</svg>

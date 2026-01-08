@@ -1,0 +1,102 @@
+/* Base theme attempting to match WangDiLab style: clean, airy, dark header over light content, blue accent */
+:root{
+  --bg:#ffffff;
+  --text:#1d1f23;
+  --muted:#6b7280;
+  --primary:#0b5ed7; /* blue accent */
+  --primary-dark:#094db1;
+  --header-bg:#0f172a; /* dark navy */
+  --header-text:#e5e7eb;
+  --section-alt:#f7f8fb;
+  --border:#e5e7eb;
+  --maxw:1120px;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Montserrat, "Noto Sans SC", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.65;
+}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);color:var(--header-text);box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.5px;font-size:22px}
+.main-nav{display:flex;gap:22px}
+.nav-link{color:var(--header-text);text-decoration:none;font-weight:500;opacity:.9}
+.nav-link:hover{opacity:1}
+.header-actions{display:flex;gap:12px}
+.btn{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 16px;font-weight:600;border:none}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-dark)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.24);color:#fff}
+.btn.ghost:hover{border-color:rgba(255,255,255,.5)}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(180deg,#0f172a 0%,#111827 55%, #0f172a 100%);color:#fff;padding:96px 0;scroll-margin-top:80px}
+.hero-inner{display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.hero-title{font-size:44px;line-height:1.15;margin:0 0 12px;font-weight:700}
+.hero-sub{max-width:780px;opacity:.9;margin:0 0 24px}
+.hero-cta{display:flex;gap:12px}
+
+/* Sections */
+.section{padding:72px 0;background:#fff;scroll-margin-top:80px}
+.section.alt{background:var(--section-alt)}
+.section-title{font-size:28px;margin:0 0 8px}
+.section-lead{margin:0 0 28px;color:var(--muted)}
+
+/* Cards */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.card-media{background-size:cover;background-position:center;height:160px}
+.card-body{padding:18px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:#4b5563}
+
+/* People */
+.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.person{display:flex;gap:16px;align-items:center;background:#fff;border-radius:16px;border:1px solid var(--border);padding:16px;box-shadow:var(--shadow)}
+.avatar{width:72px;height:72px;border-radius:50%;background-size:cover;background-position:center}
+.person-info h3{margin:0 0 4px}
+.muted{color:var(--muted)}
+
+/* Publications */
+.pub-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.pub-list li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:14px 16px;border-radius:12px;border:1px solid var(--border);background:#fff}
+.pub-title{font-weight:600}
+.pub-venue{color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.strong{font-weight:700}
+.mt-2{margin-top:8px}
+.map-embed iframe{border-radius:12px}
+
+/* Footer */
+.site-footer{background:#0b1220;color:#cfd6e6;padding:22px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand-small{font-weight:700}
+.footer-left .dot{margin:0 8px;opacity:.5}
+
+/* Back to top */
+.back-to-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:none;background:var(--primary);color:#fff;font-size:18px;display:none;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(11,94,215,.5);cursor:pointer}
+.back-to-top.show{display:flex}
+.back-to-top:hover{background:var(--primary-dark)}
+
+/* Responsive */
+@media (max-width: 960px){
+  .card-grid,.people-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero-title{font-size:36px}
+}
+@media (max-width: 640px){
+  .main-nav{display:none}
+  .card-grid,.people-grid{grid-template-columns:1fr}
+  .header-inner{height:64px}
+}
